@@ -1,9 +1,7 @@
-import { Sequelize } from 'sequelize'
+import { Sequelize, DataTypes } from 'sequelize'
 import database from '../configs/DatabaseConfig.js'
 
-const { DataTypes } = Sequelize
-
-const ProductSchema = database.define("product", {
+const ProductSchema = database.define("Product", {
   name: DataTypes.STRING,
   image: DataTypes.STRING,
   url: DataTypes.STRING
@@ -11,7 +9,7 @@ const ProductSchema = database.define("product", {
   freezeTableName: true
 })
 
-export default ProductSchema
+export { ProductSchema }
 
 (async()=>{
   await database.sync()
