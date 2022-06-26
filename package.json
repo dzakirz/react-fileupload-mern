@@ -5,7 +5,8 @@
   "type": "module",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./server.js",
+    "server": "nodemon ./server.js"
   },
   "author": "Dzaki Rozaan",
   "license": "MIT",
@@ -16,6 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
     "express-fileupload": "^1.4.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.21.1"
